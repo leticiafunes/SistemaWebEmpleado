@@ -36,7 +36,8 @@ namespace SistemaWebEmpleado.Controllers
             List<Empleado> lista = (from p in _context.Empleados
                                     where p.Titulo == titulo
                                     select p).ToList();
-            return View("Index", lista);
+            return View("View", lista);
+            
         }
 
 
@@ -58,42 +59,44 @@ namespace SistemaWebEmpleado.Controllers
         }
 
 
-        /*
+     
       [HttpGet]
       public IActionResult Edit(int id)
       {
-          Pasajero pasajero = _context.Pasajeros.SingleOrDefault(m => m.PasajeroId == id);
-          return View("Edit", pasajero);
+          Empleado empleado = _context.Empleados.SingleOrDefault(m => m.EmpleadoId == id);
+          return View("Edit", empleado);
       }
 
+      
+
+   [HttpPost]
+   public IActionResult Edit(int id, Empleado empleado)
+   {
+
+       _context.Update(empleado);
+       _context.SaveChanges();
+       return RedirectToAction(nameof(Index));
+   }
+
+        /*
+
+ [HttpGet]
+ public IActionResult Delete_confirm(int id)
+ {
+     Pasajero pasajero = _context.Pasajeros.SingleOrDefault(m => m.PasajeroId == id);
+     return View("Delete", pasajero);
+ }
+
+ [HttpPost]
+ public IActionResult Delete(int PasajeroId)
+ {
+     var pasajero = _context.Pasajeros.SingleOrDefault(m => m.PasajeroId == PasajeroId);
+     _context.Pasajeros.Remove(pasajero);
+     _context.SaveChanges();
+     return RedirectToAction(nameof(Index));
+ }
 
 
-      [HttpPost]
-      public IActionResult Edit(int id, Pasajero pasajero)
-      {
-
-          _context.Update(pasajero);
-          _context.SaveChanges();
-          return RedirectToAction(nameof(Index));
-      }
-
-      [HttpGet]
-      public IActionResult Delete_confirm(int id)
-      {
-          Pasajero pasajero = _context.Pasajeros.SingleOrDefault(m => m.PasajeroId == id);
-          return View("Delete", pasajero);
-      }
-
-      [HttpPost]
-      public IActionResult Delete(int PasajeroId)
-      {
-          var pasajero = _context.Pasajeros.SingleOrDefault(m => m.PasajeroId == PasajeroId);
-          _context.Pasajeros.Remove(pasajero);
-          _context.SaveChanges();
-          return RedirectToAction(nameof(Index));
-      }
-
-
-  }*/
+}*/
     }
 }

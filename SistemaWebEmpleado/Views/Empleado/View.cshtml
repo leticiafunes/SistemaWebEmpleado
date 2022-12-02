@@ -41,6 +41,11 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Titulo)
+
+                    @Html.ActionLink("Empleados por titulo", "ListaPorTitulo", "Empleado",  new {item.Titulo});
+                    <a asp-action="Edit" asp-route-id="@item.EmpleadoId">Editar</a> |
+
+                    <a asp-action="Delete" asp-route-id="@item.EmpleadoId">Borrar</a>
             </td>
             <td>
 
