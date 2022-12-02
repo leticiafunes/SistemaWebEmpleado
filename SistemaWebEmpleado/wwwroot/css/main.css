@@ -1,0 +1,71 @@
+﻿﻿* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.cabecera {
+    display: flex;
+   justify-content: end;
+    background-color: cornflowerblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tituloprincipal {
+    color: white;
+}
+
+
+.content {
+    display: flex;
+    max-width: 100%;
+
+   
+}
+
+.menu {
+    display: flex;
+    justify-content: end;
+    background-color:darkolivegreen;
+    height: 50px;
+    color: white;
+
+}
+
+.home, .empleado{ 
+    width: 100px;
+}
+
+
+.maincontainer {
+
+    display: flex;
+    width: 100%;
+
+}
+
+.sidebar {
+    width: 30%;
+    background-color: aquamarine;
+}
+
+.content {
+    width: 70%;
+    background-color:darkkhaki;
+}
+
+footer {
+    display: flex;
+    justify-content:center;
+    background-color: blueviolet;
+
+    color: white;
+}
+
+
+.homecabecera {
+display: flex;
+flex-direction:column;
+}
+

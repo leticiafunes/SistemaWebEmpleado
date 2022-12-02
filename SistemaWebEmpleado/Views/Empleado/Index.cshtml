@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class= "homecabecera">
+    <div class="bienvenida">Bienvenidos al sitio web!</div>
+    <div> Fecha : @ViewBag.Fecha</div>
+</div>
+
+<div>
+    <p>
+        @Html.ActionLink("Ir a Empleados", "Index", "Empleado")
+    </p>
+
+</div>
+
+
+
+@section Nav{
+    <p>Soy en Nav</p>
+    <ul>
+        <li><a href="#link1">Link1</a></li>
+        <li><a href="#link2">Link2</a></li>
+        <li><a href="#link3">Link3</a></li>
+        <li><a href="#link4">Link4</a></li>
+    </ul>
+
+}
