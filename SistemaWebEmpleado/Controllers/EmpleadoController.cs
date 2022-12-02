@@ -78,25 +78,25 @@ namespace SistemaWebEmpleado.Controllers
        return RedirectToAction(nameof(Index));
    }
 
-        /*
+     
 
  [HttpGet]
  public IActionResult Delete_confirm(int id)
  {
-     Pasajero pasajero = _context.Pasajeros.SingleOrDefault(m => m.PasajeroId == id);
-     return View("Delete", pasajero);
+     Empleado empleado = _context.Empleados.SingleOrDefault(m => m.EmpleadoId== id);
+     return View("Delete", empleado);
  }
 
  [HttpPost]
- public IActionResult Delete(int PasajeroId)
+ public IActionResult Delete(int EmpleadoId)
  {
-     var pasajero = _context.Pasajeros.SingleOrDefault(m => m.PasajeroId == PasajeroId);
-     _context.Pasajeros.Remove(pasajero);
+     var empleado = _context.Empleados.SingleOrDefault(m => m.EmpleadoId == EmpleadoId);
+     _context.Empleados.Remove(empleado);
      _context.SaveChanges();
      return RedirectToAction(nameof(Index));
  }
 
 
-}*/
-    }
+}
+    
 }
